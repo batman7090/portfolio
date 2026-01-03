@@ -16,12 +16,15 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#courses">Courses</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <!-- <button class="lang-toggle" id="langToggle" type="button">DE</button> -->
       </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Shamanth Kumar</div>
+      <!-- <button class="lang-toggle" id="langToggleMobile" type="button">DE</button> -->
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -32,6 +35,7 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#courses" onclick="toggleMenu()">Courses</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
@@ -45,12 +49,12 @@
         <h1 class="title">Shamanth Kumar</h1>
         <p class="section__text__p2">AI Engineer</p>
         <div class="btn-container">
-          <button
+          <!-- <button
             class="btn btn-color-2"
             onclick="window.open('./assets/resume-example.pdf')"
           >
             Download CV
-          </button>
+          </button> -->
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
@@ -66,7 +70,7 @@
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="location.href='https://github.com/batman7090'"
           />
         </div>
       </div>
@@ -91,7 +95,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />AI Engineering</p>
+              <p>3+ years <br />AI Engineering</p>
             </div>
             <div class="details-container">
               <img
@@ -105,12 +109,10 @@
           </div>
           <div class="text-container">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+              I am an AI Engineer with a strong background in machine learning, deep learning, and intelligent systems. I hold a Master’s degree in Intelligent Systems & Mechatronics and have over two years of hands-on experience building, training, and deploying AI-driven solutions.
+My work focuses on practical AI applications, including machine learning pipelines, deep learning models, and generative AI systems. I enjoy transforming complex problems into scalable, real-world solutions using Python, PyTorch, and modern AI frameworks.
+Currently, I am expanding my expertise in areas such as large language models, retrieval-augmented generation (RAG), and MLOps through continuous learning and project-based development. I am particularly motivated by roles that combine research, engineering, and real-world impact.
+
             </p>
           </div>
         </div>
@@ -273,13 +275,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/batman7090'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/batman7090'"
               >
                 Live Demo
               </button>
@@ -297,13 +299,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/batman7090'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/batman7090'"
               >
                 Live Demo
               </button>
@@ -321,13 +323,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/batman7090'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/batman7090'"
               >
                 Live Demo
               </button>
@@ -342,6 +344,67 @@
         onclick="location.href='./#contact'"
       />
     </section>
+    <section id="courses">
+  <p class="section__text__p1" data-i18n="courses_intro">What I'm Learning</p>
+  <h1 class="title" data-i18n="courses_title">Courses</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container">
+        <h2 class="experience-sub-title" data-i18n="udemy_title">Udemy</h2>
+
+        <div class="article-container courses-list">
+          <!-- Course 1 -->
+          <article class="course-item">
+            <img src="./assets/checkmark.png" alt="Course icon" class="icon" />
+            <div>
+              <h3>LangChain & RAG Bootcamp</h3>
+              <p data-i18n="status_in_progress">In progress</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 45%"></div>
+              </div>
+              <small>45%</small>
+            </div>
+          </article>
+
+          <!-- Course 2 -->
+          <article class="course-item">
+            <img src="./assets/checkmark.png" alt="Course icon" class="icon" />
+            <div>
+              <h3>MLOps with Docker & CI/CD</h3>
+              <p data-i18n="status_planned">Planned</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 0%"></div>
+              </div>
+              <small>0%</small>
+            </div>
+          </article>
+
+          <!-- Course 3 -->
+          <article class="course-item">
+            <img src="./assets/checkmark.png" alt="Course icon" class="icon" />
+            <div>
+              <h3>Deep Learning with PyTorch</h3>
+              <p data-i18n="status_completed">Completed</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 100%"></div>
+              </div>
+              <small>100%</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#projects'"
+  />
+</section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -371,6 +434,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#courses">Courses</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
