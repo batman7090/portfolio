@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Design tokens
+   One accent (iris), everything else is a neutral scale.
+   Light and dark are the same design — not two designs.
+   ============================================================ */
+:root {
+  --bg: #f6f6f8;
+  --bg-elev: #ffffff;
+  --ink: #0b0c0f;
+  --ink-soft: #5c6169;
+  --line: rgba(11, 12, 15, 0.10);
+  --accent: #4f46e5;
+  --accent-ink: #ffffff;
+  --glow: rgba(79, 70, 229, 0.14);
+  --field: rgba(11, 12, 15, 0.55); /* hero canvas particles */
+  --shadow: 0 1px 2px rgba(11, 12, 15, 0.04), 0 12px 32px -12px rgba(11, 12, 15, 0.12);
+  --shadow-lift: 0 2px 6px rgba(11, 12, 15, 0.05), 0 28px 60px -24px rgba(11, 12, 15, 0.22);
+  --nav: rgba(246, 246, 248, 0.72);
+}
+
+.dark {
+  --bg: #08090c;
+  --bg-elev: #101218;
+  --ink: #edeef2;
+  --ink-soft: #8f95a3;
+  --line: rgba(255, 255, 255, 0.10);
+  --accent: #8f8cff;
+  --accent-ink: #0a0b10;
+  --glow: rgba(143, 140, 255, 0.18);
+  --field: rgba(237, 238, 242, 0.62);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lift: 0 2px 6px rgba(0, 0, 0, 0.5), 0 28px 60px -24px rgba(0, 0, 0, 0.8);
+  --nav: rgba(8, 9, 12, 0.68);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+  border: 3px solid var(--bg);
+}
+
+/* Visible keyboard focus everywhere, never on mouse clicks. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@layer components {
+  /* ---- structure ---- */
+  .container-page {
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  /* ---- type ---- */
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+  }
+
+  /* ---- surfaces ---- */
+  .card {
+    position: relative;
+    background: var(--bg-elev);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+  }
+
+  /* ---- tags ---- */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--ink) 3%, transparent);
+    white-space: nowrap;
+  }
+
+  /* ---- buttons ---- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease,
+      box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .btn:active { transform: scale(0.97); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    box-shadow: 0 8px 24px -10px var(--glow);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 14px 34px -10px var(--glow);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background: color-mix(in srgb, var(--ink) 4%, transparent);
+    border-color: var(--line);
+    color: var(--ink);
+  }
+  .btn-ghost:hover {
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+    color: var(--accent);
+  }
+
+  /* ---- links that underline on hover, Apple-style ---- */
+  .link {
+    color: var(--accent);
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link:hover { background-size: 100% 1px; }
+
+  /* ---- inputs ---- */
+  .field {
+    width: 100%;
+    background: var(--bg-elev);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 13px 15px;
+    font-size: 14px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .field::placeholder { color: var(--ink-soft); opacity: 0.7; }
+  .field:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--glow);
+  }
+
+  /* ---- long-form reading (blog posts) ---- */
+  .prose-post p {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.75;
+    color: color-mix(in srgb, var(--ink) 88%, var(--ink-soft));
+    margin-bottom: 26px;
+  }
+  .prose-post h2 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 44px 0 16px;
+  }
+  .prose-post ul { margin: 0 0 26px 20px; }
+  .prose-post li {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .prose-post pre {
+    background: var(--bg-elev);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+    overflow-x: auto;
+    margin-bottom: 26px;
+  }
+  .prose-post code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* Anyone who asks for less motion gets less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  /* Images inside a blog post. They break slightly wider than the text column,
+     which is what makes a long read feel designed rather than pasted. */
+  .prose-post figure {
+    margin: 40px 0;
+  }
+  .prose-post figure img {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .prose-post figcaption {
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  @media (min-width: 900px) {
+    .prose-post figure.wide {
+      width: calc(100% + 140px);
+      margin-left: -70px;
+    }
+  }
+}
