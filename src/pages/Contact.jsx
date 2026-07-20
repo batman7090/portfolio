@@ -56,15 +56,15 @@ export default function Contact() {
     <div className="container-page pb-16 pt-32 md:pt-40">
       <Reveal>
         <p className="eyebrow">Contact</p>
-        <h1 className="mt-3 text-title font-semibold">Tell me what you are building.</h1>
+        <h1 className="mt-3 text-title font-semibold">Tell me where your idea is stuck.</h1>
       </Reveal>
 
       <div className="mt-14 grid gap-14 md:grid-cols-[0.9fr_1.1fr]">
         {/* ---- left: the human bit ---- */}
         <Reveal>
           <p className="max-w-sm text-[15px] leading-relaxed text-soft">
-            A role, a stuck pipeline, a research idea, or a project you cannot get past the demo
-            stage — all welcome. I read everything and reply within a couple of days.
+            A role, a concept that needs proving out, a prototype that will not survive real users, or a
+            research idea looking for a first build all welcome. I read everything and reply within a couple of days
           </p>
 
           <div className="mt-10 space-y-1">

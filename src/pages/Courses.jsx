@@ -25,8 +25,8 @@ export default function Courses() {
         <p className="eyebrow">Learning</p>
         <h1 className="mt-3 text-title font-semibold">Still a student, on purpose.</h1>
         <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-soft">
-          The field rewrites itself every six months. These are the courses that actually changed
-          how I build most recent first.
+          The field rewrites itself every six months, and shipping products means learning across the
+          whole stack maths, models, and the infrastructure that carries them. Most recent first.
         </p>
       </Reveal>
 

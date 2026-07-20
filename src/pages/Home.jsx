@@ -60,7 +60,7 @@ export default function Home() {
           </motion.p>
 
           <motion.h1 {...rise(0.12)} className="mt-6 text-display font-semibold">
-            Models are easy.
+            Idea to proof of concept
             <br />
             <span className="text-soft">Systems are the job.</span>
           </motion.h1>
@@ -107,8 +107,8 @@ export default function Home() {
       {/* ---------------- Featured work ---------------- */}
       <Section
         eyebrow="Selected work"
-        title="Three systems, end to end."
-        lede="Each one shipped with evaluation, monitoring, and a story about what broke first."
+        title="Carried the full distance."
+        lede="Not demos. Each one taken from an idea to something running, with the failure modes found the hard way."
         action={
           <Link to="/projects" className="link text-sm font-medium">
             All projects ↗
@@ -127,8 +127,8 @@ export default function Home() {
       {/* ---------------- Skills ---------------- */}
       <Section
         eyebrow="Toolkit"
-        title="What I reach for."
-        lede="Grouped by the job it does, not by the logo on the box."
+        title="What I reach for, at each stage."
+        lede="Grouped by where it earns its place — exploring, building, or keeping the thing alive."
       >
         <div className="grid gap-6 md:grid-cols-2">
           {skillGroups.map((group, i) => (
@@ -176,10 +176,10 @@ export default function Home() {
           <div className="card overflow-hidden p-10 text-center md:p-20">
             <p className="eyebrow">Next</p>
             <h2 className="mx-auto mt-4 max-w-2xl text-title font-semibold">
-              Got a model that works in a notebook and nowhere else?
+              Got an idea that needs to become a product?
             </h2>
             <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-soft">
-              That is usually where I come in. Tell me what you are building.
+              Concept, proof of concept, production I work across all three. Tell me where you are.
             </p>
             <Link to="/contact" className="btn btn-primary mt-8">
               Get in touch

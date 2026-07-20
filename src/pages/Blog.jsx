@@ -18,10 +18,10 @@ export default function Blog() {
     <div className="container-page pb-16 pt-32 md:pt-40">
       <Reveal>
         <p className="eyebrow">Writing</p>
-        <h1 className="mt-3 text-title font-semibold">Notes from the build.</h1>
+        <h1 className="mt-3 text-title font-semibold">Notes from the full journey.</h1>
         <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-soft">
-          Long-form posts on retrieval, fine-tuning, agents and the unglamorous infrastructure
-          underneath. Written for engineers, not for the algorithm.
+          What I learn taking systems from idea to production retrieval, agents, fine-tuning, and the
+          unglamorous infrastructure underneath. Written for engineers, not for the algorithm.
         </p>
       </Reveal>
 

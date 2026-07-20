@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-page grid gap-10 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <p className="text-lg font-semibold tracking-tight">{site.name}</p>
-          <p className="mt-2 max-w-xs text-sm leading-relaxed text-soft">{site.role} — building retrieval systems, fine-tuned models and the pipelines that keep them alive.</p>
+          <p className="mt-2 max-w-xs text-sm leading-relaxed text-soft">{site.role} — carrying AI systems from first idea through proof of concept to production.</p>
           {site.available && (
             <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5">
               <span className="relative flex h-1.5 w-1.5">

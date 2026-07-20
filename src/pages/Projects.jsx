@@ -17,10 +17,10 @@ export default function Projects() {
     <div className="container-page pb-16 pt-32 md:pt-40">
       <Reveal>
         <p className="eyebrow">Work</p>
-        <h1 className="mt-3 text-title font-semibold">Things I built and had to maintain.</h1>
+        <h1 className="mt-3 text-title font-semibold">Ideas I carried all the way.</h1>
         <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-soft">
-          Retrieval systems, computer vision services, agent workflows and the pipelines around
-          them. Open one for the architecture and what it cost to get right.
+          Retrieval systems, agent workflows and the pipelines around them each taken from concept
+          through proof of concept to something running. Open one for the architecture and what it cost to get right.
         </p>
       </Reveal>
 
