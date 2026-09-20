@@ -1,5 +1,22 @@
 export const projects = [
   {
+    slug: 'german-electricity-price-forecasting',
+    title: 'German Electricity Price Forecasting',
+    summary:
+      'A leakage-safe ML system that forecasts German day-ahead electricity prices 24 hours ahead.',
+    tags: ['Machine Learning', 'LightGBM', 'MLOps', 'FastAPI'],
+    year: 2026,
+    status: 'Shipped',
+    featured: true,
+    cover: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=70',
+    github: 'https://github.com/batman7090/german_electricity_demand_and_price_forecasting',
+    stack: ['Python', 'LightGBM', 'MLflow', 'FastAPI', 'Docker', 'Azure'],
+    body: [
+      'Built an end-to-end forecasting pipeline with SMARD electricity and DWD weather data. It predicts the price 24 hours ahead using only historical observations, with checks that prevent target leakage.',
+      'The project includes chronological evaluation, MLflow tracking, a FastAPI service, Docker, GitHub Actions, monitoring, and Azure-ready infrastructure.',
+    ],
+  },
+  {
     slug: 'multi-utility-rag-chatbot',
     title: 'Multi-Utility RAG Chatbot',
     summary:
